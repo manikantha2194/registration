@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+</head>
+<body>
+
+    <h2>Event Registration Form</h2>
+    <form action="/submit_registration" method="post" enctype="multipart/form-data">
+        <!-- Personal Details -->
+        <fieldset>
+            <legend>Personal Details</legend><br><br>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br></br>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required><br></br>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required><br></br>
+
+            <label for="address">Address</label><br><br>
+            <textarea id="address" name="address" placeholder="Enter your address" rows="3" required></textarea><br></br>
+        </fieldset>
+
+        <!-- Event Details -->
+        <fieldset>
+            <legend>Event Details</legend>
+
+            <label for="category">Participant Category</label>
+            <select id="category" name="category" required>
+                <option value="">Select...</option>
+                <option value="day_scholar">Day Scholar</option>
+                <option value="hosteller">Hosteller</option>
+            </select>
+<br><br>
+            <label for="event">Event Name:</label>
+            <input type="text" id="event" name="event" placeholder="Enter the event name" required><br><br>
+
+            <label for="preferences">Food Preferences:</label>
+            <select id="preferences" name="preferences"><br><br>
+                <option value="">Select...</option>
+                <option value="veg">Vegetarian</option>
+                <option value="non_veg">Non-Vegetarian</option>
+                <option value="vegan">Vegan</option>
+            </select>
+        </fieldset>
+
+        <!-- Feedback -->
+        <fieldset>
+            <legend>Feedback</legend>
+            <label for="feedback">Any Suggestions or Comments:</label><br><br>
+            <textarea id="feedback" name="feedback" placeholder="Share your feedback here..." rows="4"></textarea><br><br>
+        </fieldset>
+
+        <!-- Pass Collection -->
+        <fieldset>
+            <legend>Pass Collection</legend>
+            <label for="id_proof">Upload ID Proof:</label><br><br>
+            <input type="file" id="id_proof" name="id_proof" accept="image/*,.pdf" required><br><br>
+        </fieldset>
+<br><br>
+        <button type="submit">Submit Registration</button><br><br>
+    </form>
+
+</body>
+</html>
